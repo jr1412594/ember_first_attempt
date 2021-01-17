@@ -14,8 +14,10 @@ module('Integration | Component | rental/image', function (hooks) {
   />
     `);
 
-    assert.dom('.image').exists();
-    assert.dom('.image img').hasAttribute('src', '/assets/images/teaching-tomster.png');
-    assert.dom('.image img').hasAttribute('alt', 'Teaching Tomster');
+    assert
+      .dom('.image img')
+      .exists()
+      .hasAttribute('src', '/assets/images/teaching-tomster.png')
+      .hasAttribute('alt', 'Teaching Tomster');
   });
 });
