@@ -53,6 +53,7 @@ module('Acceptance | spans first', function (hooks) {
     assert.dom('nav a.menu-index').hasText('Only Spans');
     assert.dom('nav a.menu-about').hasText('About');
     assert.dom('nav a.menu-contact').hasText('Contact');
+    assert.dom('nav a.menu-tester').hasText('Tester');
 
     await click('nav a.menu-about');
     assert.equal(currentURL(), '/about');
@@ -62,5 +63,8 @@ module('Acceptance | spans first', function (hooks) {
 
     await click('nav a.menu-index');
     assert.equal(currentURL(), '/');
+
+    await click('nav a.menu-tester');
+    assert.equal(currentURL(), '/tester');
   });
 });
